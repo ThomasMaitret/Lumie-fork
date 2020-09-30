@@ -29,6 +29,6 @@
     "concurrency": 1
   },
   "pre-commit": [
-    "test:src"
+    "test"
   ]
 }
