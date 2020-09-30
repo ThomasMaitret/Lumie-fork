@@ -1,11 +1,14 @@
-const test = require('ava');
+const test = require("ava");
 
-const expressCtrl = require('../src');
+const expressCtrl = require("../src");
 
-test('should fail without express app', (t) => {
-    const error = t.throws(() => {
-        expressCtrl.load();
-    }, Error);
+test("should fail without express app", (t) => {
+  const error = t.throws(
+    () => {
+      expressCtrl.load();
+    },
+    { instanceOf: Error }
+  );
 
-    t.is(error.message, 'Expected an express app as first argument');
+  t.is(error.message, "Expected an express app as first argument");
 });
